@@ -1,0 +1,90 @@
+//
+//  ViewController.swift
+//  Midterm Unit Conversion
+//
+//  Created by Joe on 3/27/21.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    
+    
+    
+    @IBOutlet weak var unitconversionTitle: UILabel!
+    
+    
+    @IBOutlet weak var enterheightinInches: UILabel!
+    
+    
+    
+    
+    @IBOutlet weak var EnterPounds: UITextField!
+    
+    
+    @IBOutlet weak var PoundsresultLabel: UILabel!
+    
+    
+    @IBOutlet weak var feetwords: UILabel!
+    
+    
+    
+    @IBOutlet weak var enterweightinPounds: UILabel!
+    
+    
+    @IBOutlet weak var EnterInches: UITextField!
+    
+    
+    @IBOutlet weak var InchesresultLabel: UILabel!
+    
+    
+    
+    @IBOutlet weak var kilogramswords: UILabel!
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+    
+    @IBAction func kgCalculation(_ sender: Any) {
+        
+        if let kilograms = EnterPounds.text
+        {
+            let kilogramsTotal = Double(kilograms) ?? 0
+                print(kilogramsTotal)
+            
+            
+            PoundsresultLabel.text = String(format: "%.2f", kilogramsTotal * 0.454)
+            
+            
+            
+        }
+        
+        
+        
+    }
+    
+    @IBAction func ftCalculation(_ sender: Any) {
+        
+        if let feet = EnterInches.text
+        {
+            let feetTotal = Double(feet) ?? 0
+                print(feetTotal)
+            
+            
+            InchesresultLabel.text = String(format: "%.2f" , feetTotal * 0.0833)
+        }
+        
+        
+        
+    }
+    
+    
+    
+
+}
+
